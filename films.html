@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Film Projects - Tim Pow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baskerville&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --text-color: #1a1a1a;
+      --title-font: 'Baskerville', sans-serif;
+      --body-font: 'Space Grotesk', serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      font-family: var(--body-font);
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ccc;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-family: var(--title-font);
+    }
+
+    .intro-text {
+      max-width: 800px;
+      margin: 3rem auto 1rem;
+      padding: 0 2rem;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+	
+	.intro-frame {
+	  background: url('bg1.jpg') center center/cover no-repeat;
+	  padding: 4rem 2rem;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	.intro-overlay {
+	  background-color: rgba(255, 255, 255, 0.85);
+	  padding: 2rem;
+	  border-radius: 12px;
+	  max-width: 800px;
+	  text-align: center;
+	}
+
+	.intro-overlay h2 {
+	  font-family: var(--title-font);
+	  font-size: 2rem;
+	  margin-bottom: 1rem;
+	}
+
+	.intro-overlay p {
+	  font-size: 1.1rem;
+	  font-family: var(--body-font);
+	}
+
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .video-box {
+      background-color: #f5f5f5;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .video-box h3 {
+      font-family: var(--title-font);
+      margin-bottom: 0.5rem;
+    }
+
+    .video-box p {
+      font-family: var(--body-font);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #ccc;
+      font-size: 0.875rem;
+      color: #666;
+      font-family: var(--body-font);
+    }
+
+    @media (max-width: 768px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="albums.html">Albums</a>
+	<a href="eps.html">EPs</a>
+	<a href="game.html">Games</a>
+    <a href="films.html">Films</a>	
+  </nav>
+
+<section class="intro-frame">
+  <div class="intro-overlay">
+    <h2>Behind the Score</h2>
+    <p>
+      Each of these compositions was created as part of my film scoring journey, where I stripped away the original soundtrack and crafted entirely new scores. The aim was to capture the emotion, pacing, and essence of the visuals using my own musical interpretation.
+    </p>
+  </div>
+</section>
+
+<div></div>
+
+
+  <main>
+    <div class="video-grid">
+
+      <div class="video-box">
+        <h3>Past Lives</h3>
+        <p>This is a description of the first project. It explains the context, the music, and any relevant creative choices.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/Snqjmpd_bfc?si=VI6cFknDFLqNIUCw" title="Past Lives" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="video-box">
+        <h3>The Matrix</h3>
+        <p>Details about the second project. Maybe the genre, inspiration, or process behind composing the score.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/dkNzyMx5tNg?si=3i_RbYjpstCubG-w" title="The Matrix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="video-box">
+        <h3>Hereditary</h3>
+        <p>Insights into this piece — how it supports the visuals, builds emotion, or adds atmosphere.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/9_T5oHiyNIo?si=FJWGnB4nSDE2R14Z" title="Hereditary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="video-box">
+        <h3>Eternal Sunshine of the Spotless Mind</h3>
+        <p>A short summary of this work and what made it unique or special to you as a composer.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/Y5JcGkp9vbQ?si=Kj4E7yBZkCCeSbf2" title="Eternal Sunshine" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Tim Pow. All rights reserved.
+  </footer>
+
+</body>
+</html>

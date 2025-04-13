@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Composer Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baskerville&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
+
+ <style>
+  :root {
+    --background-color: #ffffff;
+    --text-color: #1a1a1a;
+    --title-font: 'Baskerville', sans-serif;
+    --body-font: 'Space Grotesk', serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    line-height: 1.6;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    font-family: var(--title-font);
+  }
+
+  header {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-image: url('https://i.imgur.com/aTshflf.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+  }
+
+  header h1,
+  header p {
+    position: relative;
+    z-index: 1;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: var(--title-font);
+    font-weight: 600;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    font-family: var(--body-font);
+  }
+
+  .section {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .section h2 {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    padding: 1rem 2rem;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .portfolio-item {
+    background-color: #f5f5f5;
+    padding: 1rem 1rem;
+    border-radius: 8px;
+  }
+
+  .portfolio-item h3 {
+    font-family: var(--title-font);
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--body-font);
+  }
+
+  .contact-form button {
+    padding: 1rem;
+    border: none;
+    background-color: var(--text-color);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--title-font);
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #ccc;
+    font-size: 0.875rem;
+    color: #666;
+    font-family: var(--body-font);
+  }
+
+  .video-text-section {
+    padding: 4rem 2rem;
+  }
+
+  .video-text-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+	.video {
+	  position: relative;
+	  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+	  height: 0;
+	  overflow: hidden;
+	  border-radius: 8px;
+	}
+
+	.video iframe {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  border-radius: 8px;
+	}
+
+	
+  .reverse-columns {
+    direction: ltr;
+  }
+
+  .reverse-columns .text {
+    order: 1;
+  }
+
+  .reverse-columns .video {
+    order: 2;
+  }
+
+  .video iframe {
+    width: 100%;
+    height: 100%;
+    max-height: 315px;
+    border-radius: 8px;
+  }
+
+  .text h3 {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .text p {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+
+  @media (max-width: 768px) {
+    .video-text-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .video,
+    .text {
+      order: 0 !important;
+    }
+  }
+</style>
+
+
+</head>
+
+<body>
+
+<nav>
+  <div></div> <!-- empty div to keep spacing -->
+  <div>
+    <a href="about.html">About</a>
+    <a href="albums.html">Albums</a>
+	<a href="eps.html">EPs</a>
+	<a href="game.html">Games</a>
+    <a href="films.html">Films</a>	
+  </div>
+</nav>
+
+
+
+  <header id="home">
+
+    <h1>TIM POW - COMPOSER</h1>
+
+    <p>FILMS &nbsp;&nbsp; TV &nbsp;&nbsp; GAMES</p>
+
+  </header>
+
+
+
+  <section class="section" id="portfolio">
+
+    <h2>Portfolio</h2>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-item">
+
+        <h3>Showreel</h3>
+
+        <p>Part of my course work whilst studying film scoring was to write music for scenes in already existing films. Below are a few examples where the original music has been removed and my music added in its place.<br><br></p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/aNvKhBGPOZA?si=HktFvFbXpFVmsW32" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      </div>
+
+    </div>
+
+  </section>
+
+<!-- Add this <hr> after the Showreel section (right before Past Lives): -->
+<hr style="border: none; height: 2px; background: #ccc; width: 80%; margin: 0rem auto;" />
+
+
+  <section class="video-text-section">
+
+  <div class="video-text-grid">
+
+    <div class="video">
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Snqjmpd_bfc?si=VI6cFknDFLqNIUCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+    <div class="text">
+
+      <h3>Past Lives</h3>
+
+      <p>This is a description of the first project. It explains the context, the music, and any relevant creative choices.</p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="video-text-grid reverse-columns">
+
+    <div class="text">
+
+      <h3>The Matrix</h3>
+
+      <p>Details about the second project. Maybe the genre, inspiration, or process behind composing the score.</p>
+
+    </div>
+
+    <div class="video">
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dkNzyMx5tNg?si=3i_RbYjpstCubG-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="video-text-grid">
+
+    <div class="video">
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/9_T5oHiyNIo?si=FJWGnB4nSDE2R14Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+    <div class="text">
+
+      <h3>Hereditary</h3>
+
+      <p>Insights into this piece — how it supports the visuals, builds emotion, or adds atmosphere.</p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="video-text-grid reverse-columns">
+
+    <div class="text">
+
+      <h3>Eternal Sunshine of the Spotless Mind</h3>
+
+      <p>A short summary of this work and what made it unique or special to you as a composer.</p>
+
+    </div>
+
+    <div class="video">
+
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/Y5JcGkp9vbQ?si=Kj4E7yBZkCCeSbf2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Add the same <hr> just before the About section: -->
+<hr style="border: none; height: 2px; background: #ccc; width: 80%; margin: 0rem auto;" />
+ 
+
+  <section class="section" id="about">
+
+    <h2>About</h2>
+
+    <p>
+
+      I’m Tim Pow, a composer and musician from Scotland. I’ve been writing music for more than two decades, with a diverse background that spans classical music, ambient soundscapes, and collaborations with musicians from many genres. I love creating ambient scores that deeply connect with audiences, enhancing the emotional core of a scene and immersing viewers or players in the narrative. In 2015, I released a solo album, which was a blend of modern classical and post rock. In 2023, I released a solo EP which was an ambient work. More recently, I have studied film scoring at the Royal Conservatoire of Scotland. From intimate, cinematic themes to grandiose orchestral scores, I bring a versatile approach to every project. If you're looking for a composer who can create music that resonates with your audience on an emotional level, let’s connect.
+
+    </p>
+
+  </section>
+
+
+
+  <section class="section" id="contact">
+
+    <h2>Contact</h2>
+
+    <p>
+
+      I want to help people bring their passion projects to life. If you’re making a short film, indie feature or game and want to work with me, I’d love to hear from you!
+
+    </p>
+
+    </p>
+
+    <form class="contact-form" action="https://formspree.io/f/xdkeyodl" method="POST">
+
+  <input type="hidden" name="_subject" value="Email from Website">
+
+  <input type="text" name="name" placeholder="Your Name" required />
+
+  <input type="email" name="email" placeholder="Your Email" required />
+
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+  <button type="submit">Send Message</button>
+
+</form>
+
+
+
+    </form>
+
+  </section>
+
+
+
+  <footer>
+
+    &copy; 2025 Tim Pow. All rights reserved.
+
+  </footer>
+
+</body>
+
+</html>

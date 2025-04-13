@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Tim Pow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baskerville&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --background-color: #000000;
+      --text-color: #ffffff;
+      --title-font: 'Baskerville', sans-serif;
+      --body-font: 'Space Grotesk', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      font-family: var(--body-font);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ccc;
+      background-color: #fff;
+    }
+
+    nav a {
+      color: #000;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-family: var(--title-font);
+      font-weight: 500;
+    }
+
+    .about-section {
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: auto;
+      background-color: #111;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(255,255,255,0.05);
+      text-align: center;
+    }
+
+    .about-section h1 {
+      font-family: var(--title-font);
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      font-family: var(--body-font);
+      color: #ddd;
+    }
+
+    .about-section img {
+      margin-top: 3rem;
+      max-width: 300px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #ccc;
+      font-size: 0.875rem;
+      color: #666;
+      background-color: #fff;
+      font-family: var(--body-font);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="albums.html">Albums</a>
+	<a href="eps.html">EPs</a>
+	<a href="game.html">Games</a>
+    <a href="films.html">Films</a>	
+  </nav>
+
+  <section class="about-section">
+    <h1>About Me</h1>
+    <p>
+      Hi! I’m Tim Pow, a composer and musician from Scotland. I’ve been writing music for more than two decades, with a background that spans classical music, ambient soundscapes, and collaborations with artists across genres.
+    </p>
+    <p>
+      I love crafting ambient scores that enhance the emotional depth of a scene and immerse audiences in the story. In 2015, I released a solo album blending modern classical and post-rock. In 2023, I followed it with an ambient EP. More recently, I studied film scoring at the Royal Conservatoire of Scotland.
+    </p>
+    <p>
+      Whether it’s cinematic minimalism or full orchestral emotion, I approach every project with passion and versatility.
+    </p>
+    <img src="selfie.jpg" alt="Tim Pow">
+  </section>
+
+  <footer>
+    &copy; 2025 Tim Pow. All rights reserved.
+  </footer>
+
+</body>
+</html>
